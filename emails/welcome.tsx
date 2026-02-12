@@ -14,6 +14,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { HowToSection } from "./components/HowToSection";
 import { LabelCard } from "./components/LabelCard";
+import { emailTailwindConfig } from "./tailwind.config";
 
 interface WelcomeEmailProps {
   userName?: string;
@@ -60,7 +61,7 @@ export const WelcomeEmail = ({ userName = "Niels" }: WelcomeEmailProps) => {
         />
       </Head>
       <Preview>Welcome to Tapp! Let's get you started.</Preview>
-      <Tailwind>
+      <Tailwind config={emailTailwindConfig}>
         <Body
           className="bg-white"
           style={{ fontFamily: "'Plus Jakarta Sans', fontWeight: 500" }}
@@ -73,15 +74,15 @@ export const WelcomeEmail = ({ userName = "Niels" }: WelcomeEmailProps) => {
                 Hi <span className="font-bold">{userName}</span>,
               </h1>
               <h1 className=" text-center mt-0 mb-4">welcome to Tapp!</h1>
-              <Text className="text-md text-center text-gray-600 text-balance">
+              <Text className="text-md text-center text-tapp-text text-balance">
                 We’re getting your starter kit ready to be shipped. Thanks to
                 your order, we're making strides towards a world with less
                 e-waste. We will notify you when it has been sent.
               </Text>
             </Section>
 
-            <Section className="bg-[#3D2E2C] p-16 flex justify-center ">
-              <Text className="text-[#30E791] text-[58px] text-center mb-6 mt-0 text-balance px-4 leading-[100%]">
+            <Section className="bg-tapp-brown p-16 flex justify-center ">
+              <Text className="text-tapp-mint text-tapp-display text-center mb-6 mt-0 text-balance px-4">
                 How to get started
               </Text>
 
@@ -91,7 +92,7 @@ export const WelcomeEmail = ({ userName = "Niels" }: WelcomeEmailProps) => {
                   title="Create an admin account  on our dashboard"
                 />
 
-                <button className="bg-[#30E791] rounded-[24px] w-[198px] h-[48px] text-[#002D33] font-semibold ml-[74px]">
+                <button className="bg-tapp-mint rounded-tapp w-[198px] h-[48px] text-tapp-deep font-semibold ml-[74px]">
                   Create admin account
                 </button>
 
@@ -106,13 +107,13 @@ export const WelcomeEmail = ({ userName = "Niels" }: WelcomeEmailProps) => {
               </div>
             </Section>
 
-            <Section className="bg-[#9FE8E8] p-16">
+            <Section className="bg-tapp-cyan p-16">
               <div className="max-w-[600px] mx-auto">
                 <div className="p-6 mb-8 inline-block flex flex-col ">
-                  <Text className="text-[#3E3131] text-[58px] leading-tight text-center m-0  ">
+                  <Text className="text-tapp-ink text-tapp-display leading-tight text-center m-0  ">
                     labels
                   </Text>
-                  <Text className="text-[#3E3131] text-[58px] leading-tight text-center m-0  ">
+                  <Text className="text-tapp-ink text-tapp-display leading-tight text-center m-0  ">
                     arrived?
                   </Text>
                 </div>

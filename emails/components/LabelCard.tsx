@@ -18,26 +18,26 @@ export const LabelCard = ({
 }: LabelCardProps) => {
   return (
     <div
-      className="mb-4 rounded-[24px] overflow-hidden flex w-full"
+      className="mb-4 rounded-tapp overflow-hidden flex w-full"
       style={{ backgroundColor }}
     >
       <div className="flex-1 p-8 flex flex-col justify-between gap-2">
         <div>
-          <Text className="text-[#FFFFFF] text-[15px] uppercase mb- mt-0 tracking-wider">
+          <Text className="text-tapp-white text-tapp-overline uppercase mb-0 mt-0 tracking-wider">
             HOW-TO
           </Text>
-          <Text className="text-[#30E791] text-[40px] leading-tight mb-0 mt-0 ">
+          <Text className="text-tapp-mint text-tapp-h1 mb-0 mt-0">
             {title} {subtitle}
           </Text>
         </div>
 
         <Button
           href="#"
-          className="bg-[#30E791] text-[#002D33] rounded-full font-semibold mt-[80px]"
+          className="bg-tapp-mint text-tapp-deep rounded-full font-semibold mt-[80px]"
           style={{
             backgroundColor: "#30E791",
             color: "#002D33",
-            padding: "14px 28px",   
+            padding: "14px 28px",
             borderRadius: "9999px",
             textDecoration: "none",
             display: "inline-block",

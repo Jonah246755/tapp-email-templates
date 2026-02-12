@@ -25,12 +25,12 @@ export const Footer = ({
       <Section className="bg-white px-8 py-12">
         <div className="text-center">
           {accountManager.reminder ? (
-            <Text className="text-[18px] leading-relaxed mb-12 mt-0 font-medium">
+            <Text className="text-tapp-body leading-relaxed mb-12 mt-0 font-medium">
               Thanks again for choosing Tapp. If you have any questions or need
               more information, please feel free to reach out.
             </Text>
           ) : (
-            <Text className="text-[18px] leading-relaxed mb-12 mt-0 font-medium">
+            <Text className="text-tapp-body leading-relaxed mb-12 mt-0 font-medium">
               Have questions? Check out our{" "}
               <Link href="#" className="underline text-black">
                 FAQ
@@ -51,22 +51,22 @@ export const Footer = ({
               }}
             />
 
-            <Text className="text-[18px] font-semibold mb-0 mt-0 text-[#403030]">
+            <Text className="text-tapp-body font-semibold mb-0 mt-0 text-tapp-text">
               {accountManager.name}
             </Text>
-            <Text className="text-[16px] text-gray-600 mb-0 mt-0 italic font-bold text-[#403030]">
+            <Text className="text-tapp-body-sm mb-0 mt-0 italic font-bold text-tapp-text">
               {accountManager.role}
             </Text>
             <Link
               href={`mailto:${accountManager.email}`}
-              className="text-[16px] text-gray-800 mb-0 no-underlin text-[#403030]"
+              className="text-tapp-body-sm mb-0 no-underline text-tapp-text"
               style={{ textDecoration: "none", marginBottom: "4px" }}
             >
               {accountManager.email}
             </Link>
             <Link
               href={`tel:${accountManager.phone.replace(/\s/g, "")}`}
-              className="text-[16px] text-gray-800 mt-0 no-underline"
+              className="text-tapp-body-sm text-tapp-text mt-0 no-underline"
               style={{ textDecoration: "none" }}
             >
               {accountManager.phone}
@@ -78,7 +78,7 @@ export const Footer = ({
       <Section className="bg-white px-8 py-8">
         <div className="flex justify-between items-start">
           <div className="">
-            <Text className="text-[36px] font-normal tracking-wider mb-0 mt-0">
+            <Text className="text-tapp-h1 font-normal tracking-wider mb-0 mt-0">
               tapp
             </Text>
           </div>
@@ -86,7 +86,7 @@ export const Footer = ({
           <div className="px-8">
             <Link
               href="mailto:hi@tapp.online"
-              className="text-[13px] text-[#403030] no-underline block mb-1"
+              className="text-tapp-meta text-tapp-text no-underline block mb-1"
               style={{
                 textDecoration: "none",
                 display: "block",
@@ -94,22 +94,22 @@ export const Footer = ({
             >
               hi@tapp.online
             </Link>
-            <Text className="text-[13px] text-[#403030] mb-0 mt-0">
+            <Text className="text-tapp-meta text-tapp-text mb-0 mt-0">
               EU: (+31)85 06 005 60
             </Text>
-            <Text className="text-[13px] text-[#403030] mb-0 mt-0">
+            <Text className="text-tapp-meta text-tapp-text mb-0 mt-0">
               US: (+1) 332 378 5792
             </Text>
           </div>
 
           <div className="">
-            <Text className="text-[13px] text-[#403030] mb-0 mt-0">
+            <Text className="text-tapp-meta text-tapp-text mb-0 mt-0">
               Emmakade 59
             </Text>
-            <Text className="text-[13px] text-[#403030] mb-0 mt-0">
+            <Text className="text-tapp-meta text-tapp-text mb-0 mt-0">
               8921 AG Leeuwarden
             </Text>
-            <Text className="text-[13px] text-[#403030] mb-0 mt-0">
+            <Text className="text-tapp-meta text-tapp-text mb-0 mt-0">
               The Netherlands
             </Text>
           </div>

@@ -9,10 +9,10 @@ interface HowToSectionProps {
 export const HowToSection = ({ number, title }: HowToSectionProps) => {
   return (
     <div className=" flex items-center gap-2">
-      <Text className="text-white text-base mt-0 text-[58px] text-[#766A6A] min-w-[75px]">
+      <Text className="text-tapp-muted text-tapp-display mt-0 min-w-[75px]">
         {number}.
       </Text>
-      <Text className="text-[#FFFFFF] text-sm mt-0 mb-0 opacity-90 text-[22px]">
+      <Text className="text-tapp-white text-tapp-h2 mt-0 mb-0 opacity-90">
         {title}
       </Text>
     </div>

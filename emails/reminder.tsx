@@ -14,12 +14,13 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { HowToSection } from "./components/HowToSection";
 import { LabelCard } from "./components/LabelCard";
+import { emailTailwindConfig } from "./tailwind.config";
 
 interface RemindEmailProps {
   userName?: string;
 }
 
-export const RemindEmail = ({ userName = "Niels" }: RemindEmailProps) => {
+export const ReminderEmail = ({ userName = "Niels" }: RemindEmailProps) => {
   return (
     <Html>
       <style>
@@ -92,7 +93,7 @@ export const RemindEmail = ({ userName = "Niels" }: RemindEmailProps) => {
         />
       </Head>
       <Preview>Welcome to Tapp! Let's get you started.</Preview>
-      <Tailwind>
+      <Tailwind config={emailTailwindConfig}>
         <Body
           className="bg-white"
           style={{ fontFamily: "'Plus Jakarta Sans', fontWeight: 500" }}
@@ -107,7 +108,7 @@ export const RemindEmail = ({ userName = "Niels" }: RemindEmailProps) => {
               <h1 className=" text-center mt-0 mb-4">
                 your plan for [company] is now active!
               </h1>
-              <Text className="text-md text-center text-gray-600 text-balance">
+              <Text className="text-md text-center text-tapp-text text-balance">
                 We appreciate your trust in us! Together, we're making strides
                 towards a world with less e-waste. You will now receive labels
                 on a [frequency] basis. To view and edit all of your plans, go
@@ -115,13 +116,13 @@ export const RemindEmail = ({ userName = "Niels" }: RemindEmailProps) => {
               </Text>
             </Section>
 
-            <Section className="bg-[#9FE8E8] p-16">
+            <Section className="bg-tapp-cyan p-16">
               <div className="max-w-[600px] mx-auto">
                 <div className="p-6 mb-8 inline-block flex flex-col ">
-                  <Text className="text-[#3E3131] text-[58px] leading-tight text-center m-0  ">
+                  <Text className="text-tapp-ink text-tapp-display leading-tight text-center m-0  ">
                     A quick
                   </Text>
-                  <Text className="text-[#3E3131] text-[58px] leading-tight text-center m-0  ">
+                  <Text className="text-tapp-ink text-tapp-display leading-tight text-center m-0  ">
                     reminder
                   </Text>
                 </div>
@@ -150,4 +151,4 @@ export const RemindEmail = ({ userName = "Niels" }: RemindEmailProps) => {
   );
 };
 
-export default RemindEmail;
+export default ReminderEmail;
